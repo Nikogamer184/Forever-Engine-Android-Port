@@ -146,7 +146,7 @@ class PlayState extends MusicBeatState
 	private var dadStrums:Strumline;
 	private var boyfriendStrums:Strumline;
 
-        public var Botplay:Bool = false;
+        public static var Botplay:Bool = false;
 
 	public static var strumLines:FlxTypedGroup<Strumline>;
 	public static var strumHUD:Array<FlxCamera> = [];
