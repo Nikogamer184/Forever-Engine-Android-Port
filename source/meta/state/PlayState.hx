@@ -560,8 +560,7 @@ class PlayState extends MusicBeatState
 		if (health > 2)
 			health = 2;
 
-		if (Botplay)
-			boyfriendStrums.autoplay = true;
+		boyfriendStrums.autoplay = Botplay;
 
 		// dialogue checks
 		if (dialogueBox != null && dialogueBox.alive)
@@ -617,9 +616,6 @@ class PlayState extends MusicBeatState
 					else
 						Main.switchState(this, new OriginalChartingState());
 				}
-
-				if ((FlxG.keys.justPressed.SIX))
-					boyfriendStrums.autoplay = !boyfriendStrums.autoplay;
 			}
 
 			///*
