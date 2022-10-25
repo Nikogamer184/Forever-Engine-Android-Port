@@ -146,6 +146,8 @@ class PlayState extends MusicBeatState
 	private var dadStrums:Strumline;
 	private var boyfriendStrums:Strumline;
 
+        public var Botplay:Bool = false;
+
 	public static var strumLines:FlxTypedGroup<Strumline>;
 	public static var strumHUD:Array<FlxCamera> = [];
 
@@ -557,6 +559,9 @@ class PlayState extends MusicBeatState
 
 		if (health > 2)
 			health = 2;
+
+		if (Botplay)
+			boyfriendStrums.autoplay = true;
 
 		// dialogue checks
 		if (dialogueBox != null && dialogueBox.alive)
