@@ -180,14 +180,19 @@ class ClassHUD extends FlxTypedGroup<FlxBasic>
 		var displayAccuracy:Bool = Init.trueSettings.get('Display Accuracy');
 		if (displayAccuracy)
 		{
-			scoreBar.text += divider + 'Accuracy: ' + Std.string(Math.floor(Timings.getAccuracy() * 100) / 100) + '%' + Timings.comboDisplay;
-			scoreBar.text += divider + 'Combo Breaks: ' + Std.string(PlayState.misses);
- 			scoreBar.text += divider + 'Rank: ' + Std.string(Timings.returnScoreRating().toUpperCase());
+			if(PlayState.Botplay)
+			{
+				scoreBar.text += divider + 'Accuracy: ' + Std.string(Math.floor(Timings.getAccuracy() * 100) / 100) + '%' + Timings.comboDisplay;
+				scoreBar.text += divider + 'Combo Breaks: ' + Std.string(PlayState.misses);
+ 				scoreBar.text += divider + 'Rank: ' + Std.string(Timings.returnScoreRating().toUpperCase());
+			}
+			else
+			{
                         scoreBar.text += (PlayState.Botplay ? '[BOTPLAY]' : '');
+			}
 		}
 		scoreBar.text += '\n';
 		scoreBar.x = Math.floor((FlxG.width / 2) - (scoreBar.width / 2));
-
 		// update counter
 		if (Init.trueSettings.get('Counter') != 'None')
 		{
