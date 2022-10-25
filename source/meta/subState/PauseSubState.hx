@@ -155,7 +155,7 @@ class PauseSubState extends MusicBeatSubState
 				case "Restart Song":
 					Main.switchState(this, new PlayState());
 				case "Toggle BotPlay":
-					PlayState.instance.Botplay = !PlayState.instance.Botplay;
+					PlayState.Botplay = !PlayState.Botplay;
 				case "Chart Editor":
 					Main.switchState(this, new meta.state.charting.ChartingState());
 				case "Exit to menu":
