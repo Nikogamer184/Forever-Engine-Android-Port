@@ -1,3 +1,4 @@
+
 package meta.subState;
 
 import flixel.FlxG;
@@ -154,7 +155,7 @@ class PauseSubState extends MusicBeatSubState
 				case "Restart Song":
 					Main.switchState(this, new PlayState());
 				case "Toggle BotPlay":
-					PlayState.Botplay = !PlayState.Botplay;
+					PlayState.instance.Botplay = !PlayState.instance.Botplay;
 				case "Chart Editor":
 					Main.switchState(this, new meta.state.charting.ChartingState());
 				case "Exit to menu":
