@@ -25,7 +25,7 @@ class PauseSubState extends MusicBeatSubState
 
 	var togglecheat:Bool = false;
 	var cheattxt:FlxText;
-	var cheattxt2:FlxText
+	var cheattxt2:FlxText;
 
 	var pauseMusic:FlxSound;
 
