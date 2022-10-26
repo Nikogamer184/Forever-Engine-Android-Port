@@ -174,9 +174,9 @@ class ClassHUD extends FlxTypedGroup<FlxBasic>
 
 	public function updateScoreText()
 	{
-		var importSongScore = PlayState.songScore;
-		var importPlayStateCombo = PlayState.combo;
-		var importMisses = PlayState.misses;
+		var importSongScore = PlayState.instance.songScore;
+		var importPlayStateCombo = PlayState.instance.combo;
+		var importMisses = PlayState.instance.misses;
 		scoreBar.text = 'Score: $importSongScore';
 		// testing purposes
 		var displayAccuracy:Bool = Init.trueSettings.get('Display Accuracy');
@@ -185,7 +185,7 @@ class ClassHUD extends FlxTypedGroup<FlxBasic>
 			if(!PlayState.Botplay)
 			{
 				scoreBar.text += divider + 'Accuracy: ' + Std.string(Math.floor(Timings.getAccuracy() * 100) / 100) + '%' + Timings.comboDisplay;
-				scoreBar.text += divider + 'Combo Breaks: ' + Std.string(PlayState.misses);
+				scoreBar.text += divider + 'Combo Breaks: ' + Std.string(PlayState.instance.misses);
  				scoreBar.text += divider + 'Rank: ' + Std.string(Timings.returnScoreRating().toUpperCase());
 			}
 			else
@@ -206,8 +206,8 @@ class ClassHUD extends FlxTypedGroup<FlxBasic>
 		}
 
 		// update playstate
-		PlayState.detailsSub = scoreBar.text;
-		PlayState.updateRPC(false);
+		PlayState.instance.detailsSub = scoreBar.text;
+		PlayState.instance.updateRPC(false);
 	}
 
 	public function beatHit()
