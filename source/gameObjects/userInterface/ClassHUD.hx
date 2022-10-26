@@ -188,7 +188,7 @@ class ClassHUD extends FlxTypedGroup<FlxBasic>
 			}
 			else
 			{
-                        scoreBar.text = '[BOTPLAY]';
+                        	scoreBar.text = '[BOTPLAY]';
 			}
 		}
 		scoreBar.text += '\n';
