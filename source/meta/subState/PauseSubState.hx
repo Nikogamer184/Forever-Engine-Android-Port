@@ -1,4 +1,3 @@
-
 package meta.subState;
 
 import flixel.FlxG;
@@ -16,6 +15,7 @@ import meta.MusicBeat.MusicBeatSubState;
 import meta.data.font.Alphabet;
 import meta.state.*;
 import meta.state.menus.*;
+import gameObjects.*;
 
 class PauseSubState extends MusicBeatSubState
 {
