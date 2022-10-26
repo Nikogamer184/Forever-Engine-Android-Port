@@ -113,7 +113,19 @@ class PauseSubState extends MusicBeatSubState
 		// trace('cameras done');
 		#end
 
-                togglecheat = false;
+                var cheattxt:FlxText = new FlxText(10, 10, 0, "CHEATS ENABLED", 32);
+	        cheattxt.scrollFactor.set();
+		cheattxt.setFormat(Paths.font("vcr.ttf"), 32);
+		cheattxt.updateHitbox();
+                cheattxt.visible = false;
+		add(cheattxt);
+
+                var cheattxt2:FlxText = new FlxText(10, 20, 0, "PROGRESS WILL NOT BE SAVED", 32);
+	        cheattxt2.scrollFactor.set();
+		cheattxt2.setFormat(Paths.font("vcr.ttf"), 32);
+		cheattxt2.updateHitbox();
+                cheattxt2.visible = false;
+		add(cheattxt2);
 
 		#if MOBILE_CONTROLS
 		addVirtualPad(UP_DOWN, A);
@@ -129,6 +141,14 @@ class PauseSubState extends MusicBeatSubState
 
 		super.update(elapsed);
 
+                if(togglecheat) {
+                	cheattxt.visble = true;
+                	cheattxt2.visble = true;
+		}
+		else {
+                	cheattxt.visble = false;
+                	cheattxt2.visble = false;
+		}
 		#if debug
 		// trace('updated event');
 		#end
@@ -158,7 +178,7 @@ class PauseSubState extends MusicBeatSubState
 					Main.switchState(this, new PlayState());
 				case "Toggle BotPlay":
 					PlayState.Botplay = !PlayState.Botplay;
-                                        togglecheat = true;
+                                        togglecheat = !togglecheat;
 				case "Chart Editor":
 					Main.switchState(this, new meta.state.charting.ChartingState());
 				case "Exit to menu":
