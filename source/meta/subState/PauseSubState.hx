@@ -145,12 +145,12 @@ class PauseSubState extends MusicBeatSubState
 		super.update(elapsed);
 
                 if(togglecheat) {
-                	cheattxt.visble = true;
-                	cheattxt2.visble = true;
+                	cheattxt.visible = true;
+                	cheattxt2.visible = true;
 		}
 		else {
-                	cheattxt.visble = false;
-                	cheattxt2.visble = false;
+                	cheattxt.visible = false;
+                	cheattxt2.visible = false;
 		}
 		#if debug
 		// trace('updated event');
