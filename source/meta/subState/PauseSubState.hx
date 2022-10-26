@@ -22,7 +22,10 @@ class PauseSubState extends MusicBeatSubState
 
 	var menuItems:Array<String> = ['Resume', 'Restart Song', 'Toggle BotPlay', 'Chart Editor', 'Exit to menu'];
 	var curSelected:Int = 0;
+
 	var togglecheat:Bool = false;
+	var cheattxt:FlxText;
+	var cheattxt2:FlxText
 
 	var pauseMusic:FlxSound;
 
@@ -113,14 +116,14 @@ class PauseSubState extends MusicBeatSubState
 		// trace('cameras done');
 		#end
 
-                var cheattxt:FlxText = new FlxText(10, 10, 0, "CHEATS ENABLED", 32);
+                cheattxt = new FlxText(10, 10, 0, "CHEATS ENABLED", 32);
 	        cheattxt.scrollFactor.set();
 		cheattxt.setFormat(Paths.font("vcr.ttf"), 32);
 		cheattxt.updateHitbox();
                 cheattxt.visible = false;
 		add(cheattxt);
 
-                var cheattxt2:FlxText = new FlxText(10, 20, 0, "PROGRESS WILL NOT BE SAVED", 32);
+                cheattxt2 = new FlxText(10, 20, 0, "PROGRESS WILL NOT BE SAVED", 32);
 	        cheattxt2.scrollFactor.set();
 		cheattxt2.setFormat(Paths.font("vcr.ttf"), 32);
 		cheattxt2.updateHitbox();
