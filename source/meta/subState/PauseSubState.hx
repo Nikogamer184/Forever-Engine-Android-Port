@@ -15,7 +15,7 @@ import meta.MusicBeat.MusicBeatSubState;
 import meta.data.font.Alphabet;
 import meta.state.*;
 import meta.state.menus.*;
-import gameObjects.*;
+import gameObjects.userInterface.ClassHUD;
 
 class PauseSubState extends MusicBeatSubState
 {
