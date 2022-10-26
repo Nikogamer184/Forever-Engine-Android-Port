@@ -170,7 +170,7 @@ class ClassHUD extends FlxTypedGroup<FlxBasic>
 
 	private final divider:String = " • ";
 
-	public function updateScoreText()
+	public static function updateScoreText()
 	{
 		var importSongScore = PlayState.songScore;
 		var importPlayStateCombo = PlayState.combo;
