@@ -22,6 +22,7 @@ class PauseSubState extends MusicBeatSubState
 
 	var menuItems:Array<String> = ['Resume', 'Restart Song', 'Toggle BotPlay', 'Chart Editor', 'Exit to menu'];
 	var curSelected:Int = 0;
+	var togglecheat:Bool = false;
 
 	var pauseMusic:FlxSound;
 
@@ -112,7 +113,7 @@ class PauseSubState extends MusicBeatSubState
 		// trace('cameras done');
 		#end
 
-                var togglecheat:Bool = false;
+                togglecheat = false;
 
 		#if MOBILE_CONTROLS
 		addVirtualPad(UP_DOWN, A);
