@@ -51,6 +51,8 @@ class ClassHUD extends FlxTypedGroup<FlxBasic>
 	var diffDisplay:String = CoolUtil.difficultyFromNumber(PlayState.storyDifficulty);
 	var engineDisplay:String = "FOREVER ENGINE v" + Main.gameVersion;
 
+        public static var instance:ClassHUD;
+
 	// eep
 	public function new()
 	{
@@ -170,7 +172,7 @@ class ClassHUD extends FlxTypedGroup<FlxBasic>
 
 	private final divider:String = " • ";
 
-	public static function updateScoreText()
+	public function updateScoreText()
 	{
 		var importSongScore = PlayState.songScore;
 		var importPlayStateCombo = PlayState.combo;
