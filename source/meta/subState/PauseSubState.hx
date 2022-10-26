@@ -15,7 +15,6 @@ import meta.MusicBeat.MusicBeatSubState;
 import meta.data.font.Alphabet;
 import meta.state.*;
 import meta.state.menus.*;
-import gameObjects.userInterface.ClassHUD;
 
 class PauseSubState extends MusicBeatSubState
 {
@@ -113,6 +112,8 @@ class PauseSubState extends MusicBeatSubState
 		// trace('cameras done');
 		#end
 
+                var togglecheat:Bool = false;
+
 		#if MOBILE_CONTROLS
 		addVirtualPad(UP_DOWN, A);
 		addPadCamera();
@@ -156,7 +157,7 @@ class PauseSubState extends MusicBeatSubState
 					Main.switchState(this, new PlayState());
 				case "Toggle BotPlay":
 					PlayState.Botplay = !PlayState.Botplay;
-					ClassHUD.instance.updateScoreText();
+                                        togglecheat = true;
 				case "Chart Editor":
 					Main.switchState(this, new meta.state.charting.ChartingState());
 				case "Exit to menu":
