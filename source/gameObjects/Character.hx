@@ -45,6 +45,8 @@ class Character extends FNFSprite
 	public var characterData:CharacterData;
 	public var adjustPos:Bool = true;
 
+        public var healthColor:HealthColor;
+
 	public function new(?isPlayer:Bool = false)
 	{
 		super(x, y);
