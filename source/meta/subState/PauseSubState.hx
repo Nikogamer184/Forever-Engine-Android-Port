@@ -130,6 +130,7 @@ class PauseSubState extends MusicBeatSubState
 		cheattxt2.updateHitbox();
         cheattxt2.visible = false;
         cheattxt2.alpha = 0;
+        cheattxt2.color = 0xFFFF0000
 		add(cheattxt2);
 		
 		FlxTween.tween(cheattxt, {alpha: 1, y: cheattxt.y + 5}, 0.4, {ease: FlxEase.quartInOut, startDelay: 0.3});
