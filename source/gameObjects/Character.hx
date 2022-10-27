@@ -26,6 +26,13 @@ typedef CharacterData =
 	var quickDancer:Bool;
 }
 
+typedef CharacterData =
+{
+	public static var red:Int;
+	public static var green:Int;
+	public static var blue:Int;
+}
+
 class Character extends FNFSprite
 {
 	public var debugMode:Bool = false;
@@ -56,6 +63,12 @@ class Character extends FNFSprite
 			camOffsetY: 0,
 			camOffsetX: 0,
 			quickDancer: false
+		};
+
+                healthcolor = {
+			red: 255,
+			green: 0,
+			blue: 0
 		};
 
 		switch (curCharacter)
