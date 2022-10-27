@@ -184,8 +184,7 @@ class ClassHUD extends FlxTypedGroup<FlxBasic>
 			    scoreBar.text += divider + 'Accuracy: ' + Std.string(Math.floor(Timings.getAccuracy() * 100) / 100) + '%' + Timings.comboDisplay;
 			    scoreBar.text += divider + 'Combo Breaks: ' + Std.string(PlayState.misses);
 			    scoreBar.text += divider + 'Rank: ' + Std.string(Timings.returnScoreRating().toUpperCase());
-		    }
-		    else {
+		    } else {
 		        scoreBar.text = '(BOTPLAY)'
 		    }
 		}
