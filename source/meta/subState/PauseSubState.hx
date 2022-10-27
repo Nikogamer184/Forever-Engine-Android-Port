@@ -132,7 +132,7 @@ class PauseSubState extends MusicBeatSubState
         cheattxt2.alpha = 0;
 		add(cheattxt2);
 		
-		FlxTween.tween(cheattxt, {alpha: 1, y: cheattxt.y + 5}, 0.4, {ease: FlxEase.quartInOut, startDelay: 0.5});
+		FlxTween.tween(cheattxt, {alpha: 1, y: cheattxt.y + 5}, 0.4, {ease: FlxEase.quartInOut, startDelay: 0.3});
 		FlxTween.tween(cheattxt2, {alpha: 1, y: cheattxt2.y + 5}, 0.4, {ease: FlxEase.quartInOut, startDelay: 0.5});
 
         togglecheat = PlayState.Botplay;
