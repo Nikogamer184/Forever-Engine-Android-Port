@@ -26,7 +26,7 @@ typedef CharacterData =
 	var quickDancer:Bool;
 }
 
-typedef healthColor =
+typedef HealthColor =
 {
 	public static var red:Int;
 	public static var green:Int;
