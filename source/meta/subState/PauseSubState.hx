@@ -116,21 +116,26 @@ class PauseSubState extends MusicBeatSubState
 		// trace('cameras done');
 		#end
 
-                cheattxt = new FlxText(10, 20, 0, "CHEATS ENABLED", 32);
-	        cheattxt.scrollFactor.set();
+        cheattxt = new FlxText(10, 15, 0, "CHEATS ENABLED", 32);
+	    cheattxt.scrollFactor.set();
 		cheattxt.setFormat(Paths.font("vcr.ttf"), 32);
 		cheattxt.updateHitbox();
-                cheattxt.visible = false;
+        cheattxt.visible = false;
+        cheattxt2.alpha = 0;
 		add(cheattxt);
 
-                cheattxt2 = new FlxText(10, 52, 0, "PROGRESS WILL NOT BE SAVED", 32);
-	        cheattxt2.scrollFactor.set();
+        cheattxt2 = new FlxText(10, 15 + 32, 0, "PROGRESS WILL NOT BE SAVED", 32);
+	    cheattxt2.scrollFactor.set();
 		cheattxt2.setFormat(Paths.font("vcr.ttf"), 32);
 		cheattxt2.updateHitbox();
-                cheattxt2.visible = false;
+        cheattxt2.visible = false;
+        cheattxt2.alpha = 0;
 		add(cheattxt2);
+		
+		FlxTween.tween(cheattxt, {alpha: 1, y: cheattxt.y + 5}, 0.4, {ease: FlxEase.quartInOut, startDelay: 0.5});
+		FlxTween.tween(cheattxt2, {alpha: 1, y: cheattxt2.y + 5}, 0.4, {ease: FlxEase.quartInOut, startDelay: 0.5});
 
-                togglecheat = PlayState.Botplay;
+        togglecheat = PlayState.Botplay;
 
 		#if MOBILE_CONTROLS
 		addVirtualPad(UP_DOWN, A);
