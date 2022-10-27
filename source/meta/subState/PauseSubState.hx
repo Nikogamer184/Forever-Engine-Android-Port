@@ -130,6 +130,8 @@ class PauseSubState extends MusicBeatSubState
                 cheattxt2.visible = false;
 		add(cheattxt2);
 
+                togglecheat = PlayState.Botplay;
+
 		#if MOBILE_CONTROLS
 		addVirtualPad(UP_DOWN, A);
 		addPadCamera();
