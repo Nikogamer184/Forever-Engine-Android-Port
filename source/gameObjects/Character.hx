@@ -28,9 +28,9 @@ typedef CharacterData =
 
 typedef HealthColor =
 {
-	public static var red:Int;
-	public static var green:Int;
-	public static var blue:Int;
+	var red:Int;
+        var green:Int;
+        var blue:Int;
 }
 
 class Character extends FNFSprite
