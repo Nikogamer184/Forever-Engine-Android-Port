@@ -185,7 +185,7 @@ class ClassHUD extends FlxTypedGroup<FlxBasic>
 			    scoreBar.text += divider + 'Combo Breaks: ' + Std.string(PlayState.misses);
 			    scoreBar.text += divider + 'Rank: ' + Std.string(Timings.returnScoreRating().toUpperCase());
 		    } else {
-		        scoreBar.text = '(BOTPLAY)'
+		        scoreBar.text = '(BOTPLAY)';
 		    }
 		}
 		scoreBar.text += '\n';
