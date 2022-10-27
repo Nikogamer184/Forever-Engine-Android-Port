@@ -26,7 +26,7 @@ typedef CharacterData =
 	var quickDancer:Bool;
 }
 
-typedef CharacterData =
+typedef healthColor =
 {
 	public static var red:Int;
 	public static var green:Int;
@@ -65,7 +65,7 @@ class Character extends FNFSprite
 			quickDancer: false
 		};
 
-                healthcolor = {
+                healthColor = {
 			red: 255,
 			green: 0,
 			blue: 0
