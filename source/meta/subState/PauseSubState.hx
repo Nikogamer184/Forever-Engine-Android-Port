@@ -116,14 +116,14 @@ class PauseSubState extends MusicBeatSubState
 		// trace('cameras done');
 		#end
 
-                cheattxt = new FlxText(10, 10, 0, "CHEATS ENABLED", 32);
+                cheattxt = new FlxText(10, 20, 0, "CHEATS ENABLED", 32);
 	        cheattxt.scrollFactor.set();
 		cheattxt.setFormat(Paths.font("vcr.ttf"), 32);
 		cheattxt.updateHitbox();
                 cheattxt.visible = false;
 		add(cheattxt);
 
-                cheattxt2 = new FlxText(10, 20, 0, "PROGRESS WILL NOT BE SAVED", 32);
+                cheattxt2 = new FlxText(10, 52, 0, "PROGRESS WILL NOT BE SAVED", 32);
 	        cheattxt2.scrollFactor.set();
 		cheattxt2.setFormat(Paths.font("vcr.ttf"), 32);
 		cheattxt2.updateHitbox();
