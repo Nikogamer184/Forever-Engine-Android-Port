@@ -70,7 +70,7 @@ class ClassHUD extends FlxTypedGroup<FlxBasic>
 
 		healthBar = new FlxBar(healthBarBG.x + 4, healthBarBG.y + 4, RIGHT_TO_LEFT, Std.int(healthBarBG.width - 8), Std.int(healthBarBG.height - 8));
 		healthBar.scrollFactor.set();
-		healthBar.createFilledBar(FlxColor.fromRGB(PlayState.dadOpponent.healthColor.red, PlayState.dadOpponent.healthColor.green, PlayState.dadOpponent.healthColor.blue), FlxColor.fromRGB(PlayState.boyfriend.healthColor.red, PlayState.boyfriend.healthColor.green, PlayState.boyfriend.healthColor.blue));
+		healthBar.createFilledBar(PlayState.dadOpponent.healthColor, PlayState.boyfriend.healthColor);
 		// healthBar
 		add(healthBar);
 
