@@ -27,7 +27,7 @@ typedef CharacterData =
 	var quickDancer:Bool;
 }
 
-typedef RGBHealthValues =
+typedef HealthRGB =
 {
 	var red:Int;
         var green:Int;
@@ -59,6 +59,7 @@ class Character extends FNFSprite
 		curCharacter = character;
 		var tex:FlxAtlasFrames;
 		antialiasing = true;
+		var RGBHealthValues:HealthColor;
 
 		characterData = {
 			offsetY: 0,
