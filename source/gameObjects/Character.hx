@@ -9,6 +9,7 @@ import flixel.addons.util.FlxSimplex;
 import flixel.animation.FlxBaseAnimation;
 import flixel.graphics.frames.FlxAtlasFrames;
 import gameObjects.userInterface.HealthIcon;
+import flixel.util.FlxColor;
 import meta.*;
 import meta.data.*;
 import meta.data.dependency.FNFSprite;
