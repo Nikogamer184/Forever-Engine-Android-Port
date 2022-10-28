@@ -273,6 +273,10 @@ class Character extends FNFSprite
 
 				flipX = true;
 
+				healthColor.red = 49;
+				healthColor.green = 176;
+				healthColor.blue = 209;
+
 				characterData.offsetY = 70;
 			/*
 				case 'bf-og':
@@ -326,6 +330,10 @@ class Character extends FNFSprite
 
 				flipX = true;
 
+				healthColor.red = 49;
+				healthColor.green = 176;
+				healthColor.blue = 209;
+
 			case 'bf-holding-gf-dead':
 				frames = Paths.getSparrowAtlas('characters/bfHoldingGF-DEAD');
 
@@ -352,6 +360,11 @@ class Character extends FNFSprite
 				playAnim('idle');
 
 				flipX = true;
+
+				healthColor.red = 49;
+				healthColor.green = 176;
+				healthColor.blue = 209;
+
 			case 'bf-car':
 				var tex = Paths.getSparrowAtlas('characters/bfCar');
 				frames = tex;
@@ -369,6 +382,11 @@ class Character extends FNFSprite
 				playAnim('idle');
 
 				flipX = true;
+
+				healthColor.red = 49;
+				healthColor.green = 176;
+				healthColor.blue = 209;
+
 			case 'bf-pixel':
 				frames = Paths.getSparrowAtlas('characters/bfPixel');
 				animation.addByPrefix('idle', 'BF IDLE', 24, false);
@@ -392,6 +410,11 @@ class Character extends FNFSprite
 				antialiasing = false;
 
 				flipX = true;
+
+				healthColor.red = 123;
+				healthColor.green = 214;
+				healthColor.blue = 246;
+
 			case 'bf-pixel-dead':
 				frames = Paths.getSparrowAtlas('characters/bfPixelsDEAD');
 				animation.addByPrefix('singUP', "BF Dies pixel", 24, false);
