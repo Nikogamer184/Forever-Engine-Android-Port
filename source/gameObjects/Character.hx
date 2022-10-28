@@ -548,7 +548,6 @@ class Character extends FNFSprite
 
 				playAnim('idle');
 
-
 				healthRGBValues.red = 196;
 				healthRGBValues.green = 94;
 				healthRGBValues.blue = 174;
