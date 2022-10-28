@@ -26,7 +26,7 @@ typedef CharacterData =
 	var quickDancer:Bool;
 }
 
-typedef HealthColor =
+typedef RGBHealthValues =
 {
 	var red:Int;
         var green:Int;
@@ -45,7 +45,7 @@ class Character extends FNFSprite
 	public var characterData:CharacterData;
 	public var adjustPos:Bool = true;
 
-        public var healthColor:HealthColor;
+        public var healthColor:FlxColor;
 
 	public function new(?isPlayer:Bool = false)
 	{
@@ -67,7 +67,7 @@ class Character extends FNFSprite
 			quickDancer: false
 		};
 
-                healthColor = {
+                RGBHealthValues = {
 			red: 255,
 			green: 0,
 			blue: 0
@@ -273,9 +273,9 @@ class Character extends FNFSprite
 
 				flipX = true;
 
-				healthColor.red = 49;
-				healthColor.green = 176;
-				healthColor.blue = 209;
+				RGBHealthValues.red = 49;
+				RGBHealthValues.green = 176;
+				RGBHealthValues.blue = 209;
 
 				characterData.offsetY = 70;
 			/*
@@ -330,9 +330,9 @@ class Character extends FNFSprite
 
 				flipX = true;
 
-				healthColor.red = 49;
-				healthColor.green = 176;
-				healthColor.blue = 209;
+				RGBHealthValues.red = 49;
+				RGBHealthValues.green = 176;
+				RGBHealthValues.blue = 209;
 
 			case 'bf-holding-gf-dead':
 				frames = Paths.getSparrowAtlas('characters/bfHoldingGF-DEAD');
@@ -361,9 +361,9 @@ class Character extends FNFSprite
 
 				flipX = true;
 
-				healthColor.red = 49;
-				healthColor.green = 176;
-				healthColor.blue = 209;
+				RGBHealthValues.red = 49;
+				RGBHealthValues.green = 176;
+				RGBHealthValues.blue = 209;
 
 			case 'bf-car':
 				var tex = Paths.getSparrowAtlas('characters/bfCar');
@@ -383,9 +383,9 @@ class Character extends FNFSprite
 
 				flipX = true;
 
-				healthColor.red = 49;
-				healthColor.green = 176;
-				healthColor.blue = 209;
+				RGBHealthValues.red = 49;
+				RGBHealthValues.green = 176;
+				RGBHealthValues.blue = 209;
 
 			case 'bf-pixel':
 				frames = Paths.getSparrowAtlas('characters/bfPixel');
@@ -411,9 +411,9 @@ class Character extends FNFSprite
 
 				flipX = true;
 
-				healthColor.red = 123;
-				healthColor.green = 214;
-				healthColor.blue = 246;
+				RGBHealthValues.red = 123;
+				RGBHealthValues.green = 214;
+				RGBHealthValues.blue = 246;
 
 			case 'bf-pixel-dead':
 				frames = Paths.getSparrowAtlas('characters/bfPixelsDEAD');
@@ -529,6 +529,8 @@ class Character extends FNFSprite
 				addOffset(getterArray[i][0], Std.parseInt(getterArray[i][1]), Std.parseInt(getterArray[i][2]));
 			}
 		}
+
+                healthColor = FlxColor.fromRGB(RGBHealthValues.red, RGBHealthValues.green, RGBHealthValues.blue);
 
 		dance();
 
