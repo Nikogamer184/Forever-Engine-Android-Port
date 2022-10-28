@@ -59,7 +59,7 @@ class Character extends FNFSprite
 		curCharacter = character;
 		var tex:FlxAtlasFrames;
 		antialiasing = true;
-		var RGBHealthValues:HealthColor;
+		var RGBHealthValues:HealthRGB;
 
 		characterData = {
 			offsetY: 0,
