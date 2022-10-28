@@ -95,6 +95,10 @@ class Character extends FNFSprite
 
 				playAnim('danceRight');
 
+				healthRGBValues.red = 165;
+				healthRGBValues.green = 0;
+				healthRGBValues.blue = 77;
+
 			case 'gf-christmas':
 				tex = Paths.getSparrowAtlas('characters/gfChristmas');
 				frames = tex;
@@ -161,6 +165,11 @@ class Character extends FNFSprite
 				animation.addByPrefix('singLEFT', 'Dad Sing Note LEFT', 24);
 
 				playAnim('idle');
+
+				healthRGBValues.red = 175;
+				healthRGBValues.green = 102;
+				healthRGBValues.blue = 206;
+
 			case 'spooky':
 				tex = Paths.getSparrowAtlas('characters/spooky_kids_assets');
 				frames = tex;
@@ -174,6 +183,12 @@ class Character extends FNFSprite
 				characterData.quickDancer = true;
 
 				playAnim('danceRight');
+
+
+				healthRGBValues.red = 213;
+				healthRGBValues.green = 126;
+				healthRGBValues.blue = 0;
+
 			case 'mom':
 				tex = Paths.getSparrowAtlas('characters/Mom_Assets');
 				frames = tex;
@@ -192,6 +207,7 @@ class Character extends FNFSprite
 				playAnim('idle');
 
 				characterData.camOffsetY = 100;
+
 			case 'mom-car':
 				tex = Paths.getSparrowAtlas('characters/momCar');
 				frames = tex;
@@ -206,6 +222,11 @@ class Character extends FNFSprite
 				animation.addByPrefix('singRIGHT', 'Mom Pose Left', 24, false);
 
 				playAnim('idle');
+
+				healthRGBValues.red = 216;
+				healthRGBValues.green = 85;
+				healthRGBValues.blue = 142;
+
 			case 'monster':
 				tex = Paths.getSparrowAtlas('characters/Monster_Assets');
 				frames = tex;
@@ -217,6 +238,10 @@ class Character extends FNFSprite
 
 				playAnim('idle');
 
+				healthRGBValues.red = 243;
+				healthRGBValues.green = 255;
+				healthRGBValues.blue = 110;
+
 			case 'monster-christmas':
 				tex = Paths.getSparrowAtlas('characters/monsterChristmas');
 				frames = tex;
@@ -227,6 +252,11 @@ class Character extends FNFSprite
 				animation.addByPrefix('singLEFT', 'Monster Right note', 24, false);
 
 				playAnim('idle');
+
+				healthRGBValues.red = 243;
+				healthRGBValues.green = 255;
+				healthRGBValues.blue = 110;
+
 			case 'pico':
 				tex = Paths.getSparrowAtlas('characters/Pico_FNF_assetss');
 				frames = tex;
@@ -253,6 +283,10 @@ class Character extends FNFSprite
 				animation.addByPrefix('singDOWNmiss', 'Pico Down Note MISS', 24);
 
 				playAnim('idle');
+
+				healthRGBValues.red = 183;
+				healthRGBValues.green = 216;
+				healthRGBValues.blue = 85;
 
 				flipX = true;
 
@@ -448,8 +482,13 @@ class Character extends FNFSprite
 
 				antialiasing = false;
 
+				healthRGBValues.red = 255;
+				healthRGBValues.green = 170;
+				healthRGBValues.blue = 111;
+
 				characterData.camOffsetY = -330;
 				characterData.camOffsetX = -200;
+
 			case 'senpai-angry':
 				frames = Paths.getSparrowAtlas('characters/senpai');
 				animation.addByPrefix('idle', 'Angry Senpai Idle', 24, false);
@@ -463,8 +502,13 @@ class Character extends FNFSprite
 
 				antialiasing = false;
 
+				healthRGBValues.red = 255;
+				healthRGBValues.green = 170;
+				healthRGBValues.blue = 111;
+
 				characterData.camOffsetY = -330;
 				characterData.camOffsetX = -200;
+
 			case 'spirit':
 				frames = Paths.getPackerAtlas('characters/spirit');
 				animation.addByPrefix('idle', "idle spirit_", 24, false);
@@ -480,6 +524,10 @@ class Character extends FNFSprite
 
 				antialiasing = false;
 				characterData.quickDancer = true;
+
+				healthRGBValues.red = 255;
+				healthRGBValues.green = 60;
+				healthRGBValues.blue = 110;
 
 				characterData.camOffsetY = 50;
 				characterData.camOffsetX = 100;
@@ -499,6 +547,12 @@ class Character extends FNFSprite
 				animation.addByPrefix('singRIGHT-alt', 'Parent Right Note Mom', 24, false);
 
 				playAnim('idle');
+
+
+				healthRGBValues.red = 196;
+				healthRGBValues.green = 94;
+				healthRGBValues.blue = 174;
+
 			default:
 				// set up animations if they aren't already
 
