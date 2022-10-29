@@ -119,7 +119,7 @@ class Main extends Sprite
 		Lib.current.loaderInfo.uncaughtErrorEvents.addEventListener(UncaughtErrorEvent.UNCAUGHT_ERROR, onCrash);
 		#end
 
-		#if (html5 || neko)
+		#if (html5 || neko || android)
 		framerate = 60;
 		#end
 
