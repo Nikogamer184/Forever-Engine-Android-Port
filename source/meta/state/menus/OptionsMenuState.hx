@@ -135,7 +135,7 @@ class OptionsMenuState extends MusicBeatState
 		infoText = new FlxText(5, FlxG.height - 24, 0, "", 32);
 		infoText.setFormat("VCR OSD Mono", 20, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		infoText.textField.background = true;
-		infoText.textField.backgroundColor = FlxColor.BLACK;
+		infoText.textField.backgroundColor = 0xC0000000;
 		add(infoText);
 
 		#if MOBILE_CONTROLS
